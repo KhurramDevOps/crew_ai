@@ -29,6 +29,8 @@ An Agent in Crew AI has multiple attributes that define its behavior and role in
 
 ---
 
+->
+
 ### **Agent Role**
 
 Each agent has a role that defines its purpose in the Crew AI system. For example, in the case of a math-solving agent:

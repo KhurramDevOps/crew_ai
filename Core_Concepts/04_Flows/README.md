@@ -8,7 +8,7 @@ CrewAI Flows is a powerful feature designed to streamline the creation and manag
 
 Flows enable you to create structured, event-driven workflows. They provide a seamless way to connect multiple tasks, manage state, and control the flow of execution in your AI applications. With Flows, you can easily design and implement multi-step processes that leverage the full potential of CrewAI’s capabilities.
 
-## Key Features
+## Key Features.
 
 - **Simplified Workflow Creation:** Easily chain together multiple Crews and tasks to create complex AI workflows.
 

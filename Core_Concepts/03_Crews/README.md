@@ -10,7 +10,7 @@ A **Crew** in CrewAI is a collection of agents and tasks that work together to a
 
 ## **CREW EXECUTION PROCESS**
 
-### Crew Attributes
+### Crew Attributes.
 
 - **Sequential Process**: Tasks are executed one after another, allowing for a linear flow of work.
 
