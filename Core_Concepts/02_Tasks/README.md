@@ -10,6 +10,8 @@ Tasks in Crew AI enable the delegation of work, ensure that the right agents are
 
 ---
 
+->
+
 ## **Task Execution Flow**
 
 Tasks can be executed in two ways:
