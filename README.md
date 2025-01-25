@@ -41,7 +41,8 @@ If you encounter errors because your global Python version is too high (e.g., Py
   ```
 
 - For Windows:
-  First open the command prompt as administrator then run the following command:
+
+  **_First open the command prompt as administrator then run the following command:_**
 
   1. Install Chocolatey
 
@@ -83,6 +84,16 @@ If you encounter errors because your global Python version is too high (e.g., Py
   ```powershell
   pyenv rehash
   ```
+
+  5. #### Then install the c++ credentials using this link :
+
+     ### [Click Here](https://visualstudio.microsoft.com)
+
+     - Now you will see this page:
+
+     [![c++ credentials](https://i.postimg.cc/fbZqVSsW/Screenshot-2025-01-25-at-18-48-15.png)](https://postimg.cc/bZC9MJd4)
+
+  ### Click download and athenticate
 
 2. #### Now Install Python Version 3.12.8 using pyenv:.
 
