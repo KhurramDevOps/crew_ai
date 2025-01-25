@@ -84,7 +84,7 @@ If you encounter errors because your global Python version is too high (e.g., Py
   pyenv rehash
   ```
 
-2. #### Now Install Python Version 3.12.8 using pyenv:
+2. #### Now Install Python Version 3.12.8 using pyenv:.
 
 - **For MacOS/Linux**:
   ```bash
