@@ -33,14 +33,14 @@ If you encounter errors because your global Python version is too high (e.g., Py
 
 1. ### First, install **pyenv** using the following command:
 
-- For MacOS/Linux:
+- **For MacOS/Linux**
 
   ```bash
   brew install pyenv
 
   ```
 
-- For Windows:
+- **For Windows:**
 
   **_First open the command prompt as administrator then run the following command:_**
 
@@ -93,7 +93,7 @@ If you encounter errors because your global Python version is too high (e.g., Py
 
      [![c++ credentials](https://i.postimg.cc/fbZqVSsW/Screenshot-2025-01-25-at-18-48-15.png)](https://postimg.cc/bZC9MJd4)
 
-  ### Click download and athenticate
+  ### Click download and authenticate
 
 2. #### Now Install Python Version 3.12.8 using pyenv:.
 
@@ -209,5 +209,3 @@ pyenv version
 - [Installation Guide](https://docs.crewai.com/installation)
 
 ### Installation successful! You’re ready to create your first crew.
-
-Test change
