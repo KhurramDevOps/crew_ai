@@ -53,14 +53,36 @@ If you encounter errors because your global Python version is too high (e.g., Py
   2. Install pyenv using Chocolatey:
 
      ```powershell
-     choco install pyenv
+     choco install pyenv --pre
 
      ```
+
+  3. Install the required version of python using pyenv:
+
+  ```powershell
+  pyenv install <specified python version>
+  ```
+
+  like this:
+
+  ```powershell
+  pyenv install 3.12.8
+  pyenv install 3.9.12
+  ```
+
+  Download the version of python you want to install and then install it.
 
   3. Verify the installation:
+
      ```powershell
-     pyenv --version
+     python --version
      ```
+
+  4. Refresh the terminal with this command to apply the changes:
+
+  ```powershell
+  pyenv rehash
+  ```
 
 2. #### Now Install Python Version 3.12.8 using pyenv:
 
@@ -176,4 +198,5 @@ pyenv version
 - [Installation Guide](https://docs.crewai.com/installation)
 
 ### Installation successful! You’re ready to create your first crew.
+
 Test change
