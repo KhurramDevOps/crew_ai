@@ -19,6 +19,10 @@ python3 --version
 
 ```
 
+## Install CREW AI IF YOU HAVE Python 3.10 or higher but less than 3.13
+
+### FOR WINDOWS
+
 ## **Downgrading Python Version (If Needed)**
 
 If you encounter errors because your global Python version is too high (e.g., Python 3.13), you can downgrade to Python 3.12.8 using pyenv.
@@ -29,7 +33,7 @@ If you encounter errors because your global Python version is too high (e.g., Py
 - **Solution:** I used `pyenv` to downgrade my Python version to 3.12.8 as recommended by the Crew AI docs.
 - I have the **3.13.1 python version** installed on my system. I will install the required version of python using **pyenv**.
 
-- ## SOLUTION:
+- ## SOLUTION FOR MacOS/LINUX:
 
 1. ### First, install **pyenv** using the following command:
 
@@ -40,99 +44,22 @@ If you encounter errors because your global Python version is too high (e.g., Py
 
   ```
 
-- **For Windows:**
+2. #### Now Install Python Version 3.12.8 using pyenv:.
 
-  **_First open the command prompt as administrator then run the following command:_**
-
-  1. Install Chocolatey
-
-     ```powershell
-     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
-     ```
-
-  2. Install pyenv using Chocolatey:
-
-     ```powershell
-     choco install pyenv --pre
-
-     ```
-
-  3. Install the required version of python using pyenv:
-
-  ```powershell
-  pyenv install <specified python version>
-  ```
-
-  like this:
-
-  ```powershell
+```bash
   pyenv install 3.12.8
-  pyenv install 3.9.12
-  ```
+```
 
-  Download the version of python you want to install and then install it.
-
-  3. Verify the installation:
-
-     ```powershell
-     python --version
-     ```
-
-  4. Refresh the terminal with this command to apply the changes:
-
-  ```powershell
-  pyenv rehash
-  ```
-
-  5. #### Then install the c++ credentials using this link :
-
-     ### [Click Here](https://visualstudio.microsoft.com)
-
-     - Now you will see this page:
-
-     [![c++ credentials](https://i.postimg.cc/fbZqVSsW/Screenshot-2025-01-25-at-18-48-15.png)](https://postimg.cc/bZC9MJd4)
-
-### 6. Install the C++ build tools:
-
-     - Click on the "Download" button.
-     - Select the "Build tools for C++" option.
-     - Choose the correct version of the build tools that matches your Python version.
-     - Click on the "Download" button to download the build tools.
-
-7. ### You have to tick the check box
-
-   - MSVC v143 - VS 2022 C++ x64/x86Windows 10 SDK
-   - You have to check this
-   - Now you will see this page:
-     [![c++ tools.png](https://i.postimg.cc/T16yrwbd/Screenshot-2025-01-27-at-19-40-31.png)](https://postimg.cc/nj3cxnTg)
-
-   - Click the check box to tick it.
-
-8. #### Now Install Python Version 3.12.8 using pyenv:.
-
-- **For MacOS/Linux**:
+- Run this command in your project directory:
   ```bash
-  pyenv install 3.12.8
+  pyenv local 3.12.8
   ```
-  - Run this command in your project directory:
-    ```bash
-    pyenv local 3.12.8
-    ```
-- **For Windows**:
-  ```powershell
-  pyenv install 3.12.8
-  ```
-  - Run this command in your project directory:
-    ```powershell
-    pyenv local 3.12.8
-    ```
 
 3. ### Now Install pyenv-vitualenv
-   - **For MacOS/Linux**:
 
 ```bash
 brew install pyenv-virtualenv
+
 ```
 
 4. ### set up Shell Configuration
@@ -152,24 +79,106 @@ brew install pyenv-virtualenv
    pyenv virtualenv 3.12.8 crew_ai_env
    ```
 
-- **For windows**:
+## **SOLUTION For Windows if You have python 3.13 or later:**
 
-  1.  ### Navigate to the project directory
+**_First open the command prompt as administrator then run the following command:_**
 
-  2.  ### Run the following command in the command prompt:
-      ```powershell
-      pyenv local 3.12.8
-      ```
-      This will set the local Python version to 3.12.8. in your project directory.
-  3.  ### verify
-      ```powershell
-      pyenv version # This should show Python 3.12.8
-      ```
-  4.  ### Create the virtual environment
-      ```powershell
-      python -m venv myenv
-      ```
-      This will create a virtual environment named myenv in your project directory.USing python 3.12.8
+1. Install Chocolatey
+
+   ```powershell
+   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+   ```
+
+2. Install pyenv using Chocolatey:
+
+   ```powershell
+   choco install pyenv --pre
+
+   ```
+
+3. Install the required version of python using pyenv:
+
+```powershell
+pyenv install <specified python version>
+```
+
+like this:
+
+```powershell
+pyenv install 3.12.8
+pyenv install 3.9.12
+```
+
+Download the version of python you want to install and then install it.
+
+3. Verify the installation:
+
+   ```powershell
+   python --version
+   ```
+
+4. Refresh the terminal with this command to apply the changes:
+
+```powershell
+pyenv rehash
+```
+
+5. #### Then install the c++ credentials using this link :
+
+   ### [Click Here](https://visualstudio.microsoft.com)
+
+   - Now you will see this page:
+
+   [![c++ credentials](https://i.postimg.cc/fbZqVSsW/Screenshot-2025-01-25-at-18-48-15.png)](https://postimg.cc/bZC9MJd4)
+
+### 6. Install the C++ build tools:
+
+     - Click on the "Download" button.
+     - Select the "Build tools for C++" option.
+     - Choose the correct version of the build tools that matches your Python version.
+     - Click on the "Download" button to download the build tools.
+
+7. ### You have to tick the check box
+
+   - MSVC v143 - VS 2022 C++ x64/x86Windows 10 SDK
+   - You have to check this
+   - Now you will see this page:
+     [![c++ tools.png](https://i.postimg.cc/T16yrwbd/Screenshot-2025-01-27-at-19-40-31.png)](https://postimg.cc/nj3cxnTg)
+
+   - Click the check box to tick it.
+
+8. #### Now Install Python Version 3.12.8 using pyenv:.
+
+- **For Windows**:
+
+  ```powershell
+  pyenv install 3.12.8
+  ```
+
+  - Run this command in your project directory:
+    ```powershell
+    pyenv local 3.12.8
+    ```
+
+9. **NOwW**:
+
+1. ### Navigate to the project directory
+
+1. ### Run the following command in the command prompt:
+   ```powershell
+   pyenv local 3.12.8
+   ```
+   This will set the local Python version to 3.12.8. in your project directory.
+1. ### verify
+   ```powershell
+   pyenv version # This should show Python 3.12.8
+   ```
+1. ### Create the virtual environment
+   ```powershell
+   python -m venv myenv
+   ```
+   This will create a virtual environment named myenv in your project directory.USing python 3.12.8
 
 ### **Installing Crew AI**
 
