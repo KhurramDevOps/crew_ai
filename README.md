@@ -189,7 +189,7 @@ pyenv rehash
    - MSVC v143 - VS 2022 C++ x64/x86Windows 10 SDK
    - You have to check this
    - Now you will see this page:
-     [![c++ tools.png](https://i.postimg.cc/T16yrwbd/Screenshot-2025-01-27-at-19-40-31.png)](https://postimg.cc/nj3cxnTg)
+     [![crewai check box](https://i.postimg.cc/kgzh738N/Screenshot-2025-01-27-at-20-37-24.png)](https://postimg.cc/mP3SSnmh)
 
    - Click the check box to tick it.
 
