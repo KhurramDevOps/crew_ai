@@ -23,6 +23,51 @@ python3 --version
 
 ### FOR WINDOWS
 
+- Open your terminal or command prompt.
+- first check the python
+
+```powershell
+python --version
+```
+
+- Install CREW AI using pip
+
+```powershell
+pip install crewai crewai-tools
+```
+
+- If you encounter any errors during the installation process, Then You have to Install the crewai Tools here's the link below
+
+  ### [Click Here To download](https://visualstudio.microsoft.com)
+
+  - Now you will see this page:
+
+  [![c++ credentials.png](https://i.postimg.cc/fbZqVSsW/Screenshot-2025-01-25-at-18-48-15.png)](https://postimg.cc/bZC9MJd4)
+
+  -After installation , you have to open the downlaoded file and follow the instructions
+
+- ### You have to tick the check box
+
+- MSVC v143 - VS 2022 C++ x64/x86Windows 10 SDK
+- You have to check this
+- Now you will see this page:
+  [![crewai check box](https://i.postimg.cc/kgzh738N/Screenshot-2025-01-27-at-20-37-24.png)](https://postimg.cc/mP3SSnmh)
+- Now you have to click on the install button
+
+#### now u see this page
+
+[![downloading screen.png](https://i.postimg.cc/SKL5d12W/Screenshot-2025-01-27-at-20-37-42.png)](https://postimg.cc/4KdBN51d)
+
+- Now you have to wait for the installation process to complete
+
+#### Now try again to install CREWAI
+
+```powershell
+pip install crewai crewai-tools
+```
+
+### Hope so it will downloaded
+
 ## **Downgrading Python Version (If Needed)**
 
 If you encounter errors because your global Python version is too high (e.g., Python 3.13), you can downgrade to Python 3.12.8 using pyenv.
