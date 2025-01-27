@@ -93,9 +93,23 @@ If you encounter errors because your global Python version is too high (e.g., Py
 
      [![c++ credentials](https://i.postimg.cc/fbZqVSsW/Screenshot-2025-01-25-at-18-48-15.png)](https://postimg.cc/bZC9MJd4)
 
-  ### Click download and authenticate
+### 6. Install the C++ build tools:
 
-2. #### Now Install Python Version 3.12.8 using pyenv:.
+     - Click on the "Download" button.
+     - Select the "Build tools for C++" option.
+     - Choose the correct version of the build tools that matches your Python version.
+     - Click on the "Download" button to download the build tools.
+
+7. ### You have to tick the check box
+
+   - MSVC v143 - VS 2022 C++ x64/x86Windows 10 SDK
+   - You have to check this
+   - Now you will see this page:
+     [![c++ tools.png](https://i.postimg.cc/T16yrwbd/Screenshot-2025-01-27-at-19-40-31.png)](https://postimg.cc/nj3cxnTg)
+
+   - Click the check box to tick it.
+
+8. #### Now Install Python Version 3.12.8 using pyenv:.
 
 - **For MacOS/Linux**:
   ```bash
