@@ -14,8 +14,8 @@ dependencies = [
 ]
 
 [project.scripts]
-project1 = "project1:main"
-kickoff = "project1.main:main"
+project1 = "Trip_Planner_Crew:main"
+kickoff = "Trip_Planner_Crew.main:main"
 
 [build-system]
 requires = ["hatchling"]
