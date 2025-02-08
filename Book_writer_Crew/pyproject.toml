@@ -15,6 +15,7 @@ dependencies = [
 
 [project.scripts]
 book-writer-crew = "book_writer_crew:main"
+khurram1 = "book_writer_crew.main:run"
 
 [build-system]
 requires = ["hatchling"]

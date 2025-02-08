@@ -14,7 +14,7 @@ model = LLM(model="gemini/gemini-2.0-flash-exp", api_key=api_key)
 
 
 word_count = 2000
-Book_Title = "The Era of Artificial Intelligence"
+Book_Title = "The History of Islam"
 Author_Name= "Muhammad Khurram"
 Target_Audience = "Youngsters"
 Writing_Style = "Narrative"
@@ -39,17 +39,27 @@ Content_Strategist_Task = tasks.Content_Strategist_Task(
     Writing_Style = Writing_Style
 )
 
+def save_to_markdown(text, filename="output.md"):
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write(text)
+    print(f"Markdown file saved as {filename}")
+
 Writer_Task = tasks.Writer_Task(
     agent = Writer,
     context = [Content_Strategist_Task],
+    callback = save_to_markdown,
 )
 
 crew = Crew(
     agents = [Content_Strategist, Writer],
     tasks = [Content_Strategist_Task, Writer_Task],
     verbose = True,
-    process = Process.hierarical,
-    manager_llm = model 
+    # process = Process.hierarchical,
+    # manager_llm = model 
 
 
 )
+
+def run():
+    result = crew.kickoff()
+    print(result)
