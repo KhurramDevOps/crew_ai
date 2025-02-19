@@ -11,6 +11,9 @@ dependencies = [
     "crewai>=0.100.1",
     "crewai-tools>=0.33.0",
     "python-dotenv>=1.0.1",
+    "toml>=0.10.2",
+    "tornado>=6.4.2",
+    "watchdog>=6.0.0",
 ]
 
 [project.scripts]

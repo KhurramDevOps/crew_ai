@@ -1,7 +1,8 @@
-from .Agents import BookWriterAgent
-from .Task import BookWriterTasks
+from .agents import BookWriterAgent
+from .task import BookWriterTasks
 from dotenv import load_dotenv
 from crewai import Crew, Process, LLM
+import streamlit as st
 import os
 
 load_dotenv()
@@ -13,11 +14,15 @@ model = LLM(model="gemini/gemini-2.0-flash-exp", api_key=api_key)
 
 
 
-word_count = 2000
-Book_Title = "The History of Islam"
-Author_Name= "Muhammad Khurram"
-Target_Audience = "Youngsters"
-Writing_Style = "Narrative"
+word_count = st.text_input("word_count")
+
+Book_Title = st.text_input("Book_Title")
+
+Author_Name = st.text_input("Author_Name")
+
+Target_Audience = st.text_input("Target_Audience")
+
+Writing_Style = st.text_input("Writing_Style")
 
 
 # obj
@@ -60,6 +65,8 @@ crew = Crew(
 
 )
 
-def run():
-    result = crew.kickoff()
-    print(result)
+action = st.button("submit")
+if action:
+    with st.spinner("Processing... Please wait"):  # Show loading spinner
+        results = crew.kickoff()
+        st.write(results)

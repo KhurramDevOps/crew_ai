@@ -2,3 +2,4 @@ crew_env
 service.json
 .env
 **/__pycache__/
+projectTest
