@@ -1,0 +1,20 @@
+[project]
+name = "book-writer-crew-revision"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Khurramshahzad175", email = "khurramshahzad2440@gmail.com" }
+]
+requires-python = ">=3.12.8"
+dependencies = [
+    "crewai>=0.102.0",
+    "crewai-tools>=0.36.0",
+]
+
+[project.scripts]
+book-writer-crew-revision = "book_writer_crew_revision:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
