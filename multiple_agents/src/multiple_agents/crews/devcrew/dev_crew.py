@@ -1,53 +1,59 @@
-#!/usr/bin/env python
-from random import randint
+from crewai import Agent, Crew, Process, Task
+from crewai.project import CrewBase, agent, crew, task
 
-from pydantic import BaseModel
-
-from crewai.flow import Flow, listen, start
-
-from litellm1.crews.poem_crew.poem_crew import PoemCrew
+# If you want to run a snippet of code before or after the crew starts,
+# you can use the @before_kickoff and @after_kickoff decorators
+# https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
 
 
-class PoemState(BaseModel):
-    sentence_count: int = 1
-    poem: str = ""
+@CrewBase
+class Devcrew:
+    """Developer Crew"""
 
+    # Learn more about YAML configuration files here:
+    # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
+    # Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
+    agents_config = "config/agents.yaml"
+    tasks_config = "config/tasks.yaml"
 
-class PoemFlow(Flow[PoemState]):
-
-    @start()
-    def generate_sentence_count(self):
-        print("Generating sentence count")
-        self.state.sentence_count = randint(1, 5)
-
-    @listen(generate_sentence_count)
-    def generate_poem(self):
-        print("Generating poem")
-        result = (
-            PoemCrew()
-            .crew()
-            .kickoff(inputs={"sentence_count": self.state.sentence_count})
+    # If you would lik to add tools to your crew, you can learn more about it here:
+    # https://docs.crewai.com/concepts/agents#agent-tools
+    @agent
+    def junior_python_developer(self) -> Agent:
+        return Agent(
+            config=self.agents_config["junior_python_developer"]
+        )
+    
+    @agent
+    def senior_python_developer(self) -> Agent:
+        return Agent(
+            config=self.agents_config["senior_python_developer"]
         )
 
-        print("Poem generated", result.raw)
-        self.state.poem = result.raw
+    # To learn more about structured task outputs,
+    # task dependencies, and task callbacks, check out the documentation:
+    # https://docs.crewai.com/concepts/tasks#overview-of-a-task
+    @task
+    def write_code(self) -> Task:
+        return Task(
+            config=self.tasks_config["write_code"]
+        )
+    
+    @task
+    def review_code(self) -> Task:
+        return Task(
+            config=self.tasks_config["review_code"]
+        )
 
-    @listen(generate_poem)
-    def save_poem(self):
-        print("Saving poem")
-        with open("poem.txt", "w") as f:
-            f.write(self.state.poem)
+    @crew
+    def crew(self) -> Crew:
+        """Creates the Development Crew"""
+        # To learn how to add knowledge sources to your crew, check out the documentation:
+        # https://docs.crewai.com/concepts/knowledge#what-is-knowledge
 
-
-def kickoff():
-    poem_flow = PoemFlow()
-    poem_flow.kickoff()
-
-
-def plot():
-    poem_flow = PoemFlow()
-    poem_flow.plot()
-
-
-if __name__ == "__main__":
-    kickoff()
+        return Crew(
+            agents=self.agents,  # Automatically created by the @agent decorator
+            tasks=self.tasks,  # Automatically created by the @task decorator
+            process=Process.sequential,
+            verbose=True,
+        )
