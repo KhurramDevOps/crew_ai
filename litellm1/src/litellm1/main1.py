@@ -12,7 +12,7 @@ class LitellmFlow(Flow):
                 'content': 'Where blue ringed octopus is found?'
             }]
         )
-        return output
+        return [output['choices'][0]['message']['content']]
 
 def run_litellm_flow():
     obj = LitellmFlow()
