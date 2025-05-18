@@ -1,4 +1,4 @@
-# **Learning CREW AI**
+# **Learning CREW AI!**
 
 [![crew-only-logo.png](https://i.postimg.cc/G3xn0D6W/crew-only-logo.png)](https://postimg.cc/F1zB3Yrp)
 
