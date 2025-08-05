@@ -58,7 +58,7 @@ pip install crewai crewai-tools
 
 [![downloading screen.png](https://i.postimg.cc/SKL5d12W/Screenshot-2025-01-27-at-20-37-42.png)](https://postimg.cc/4KdBN51d)
 
-- Now you have to wait for the installation process to complete
+-  you have to wait for the installation process to complete
 
 #### Now try again to install CREWAI
 
