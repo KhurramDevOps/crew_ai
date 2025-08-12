@@ -44,7 +44,7 @@ pip install crewai crewai-tools
 
   [![c++ credentials.png](https://i.postimg.cc/fbZqVSsW/Screenshot-2025-01-25-at-18-48-15.png)](https://postimg.cc/bZC9MJd4)
 
-  -After installation , you have to open the downlaoded file and follow the instructions
+  -you have to open the downlaoded file and follow the instructions
 
 - ### You have to tick the check box
 
